@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Spawner : MonoBehaviour
+public class Enemy_Movement : MonoBehaviour
 {
-    public GameObject enemy;
 
+    private float speed = 2f;
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(enemy);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 }
