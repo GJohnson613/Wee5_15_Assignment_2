@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShootLaser : MonoBehaviour
 {
     public Transform FirePoint;
+    public GameObject LaserPrefab;
 
     // Start is called before the first frame update
     void Start()
