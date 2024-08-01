@@ -14,6 +14,9 @@ public class LaserMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.right * Time.deltaTime * speed;
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 playerPosition = transform.position;
+        Vector3 aim = mousePosition - playerPosition;
+        transform.position += aim * Time.deltaTime * speed;
     }
 }

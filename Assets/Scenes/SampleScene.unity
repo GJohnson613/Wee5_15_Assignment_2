@@ -660,7 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirePoint: {fileID: 572519447}
-  LaserPrefab: {fileID: 8837918860839992795, guid: 4f209a14daa99be4d81911c0597a4dd0, type: 3}
+  LaserPrefab: {fileID: 4028515165380804231, guid: 6b836b9d06bb5464399154d4ebb3da6a, type: 3}
 --- !u!1 &869914418
 GameObject:
   m_ObjectHideFlags: 0

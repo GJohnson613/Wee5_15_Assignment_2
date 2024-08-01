@@ -24,8 +24,10 @@ public class ShootLaser : MonoBehaviour
 
     void Shoot()
     {
-        //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, FirePoint.right);
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 playerPosition = transform.position;
+        Vector2 aim = mousePosition - playerPosition;
+        RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, aim);
         GameObject laserInstance = Instantiate(LaserPrefab, FirePoint.position, Quaternion.identity);
     }
 }
