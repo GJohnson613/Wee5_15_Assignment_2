@@ -17,6 +17,6 @@ public class LaserMovement : MonoBehaviour
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 playerPosition = transform.position;
         Vector3 aim = mousePosition - playerPosition;
-        transform.position += aim * Time.deltaTime * speed;
+        transform.Translate(aim * Time.deltaTime * speed);
     }
 }
