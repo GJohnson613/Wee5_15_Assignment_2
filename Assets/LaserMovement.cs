@@ -19,4 +19,12 @@ public class LaserMovement : MonoBehaviour
         Vector3 aim = mousePosition - playerPosition;
         transform.Translate(aim * Time.deltaTime * speed);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
