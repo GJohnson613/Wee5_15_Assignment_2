@@ -29,5 +29,16 @@ public class ShootLaser : MonoBehaviour
         Vector2 aim = mousePosition - playerPosition;
         RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, aim);
         GameObject laserInstance = Instantiate(LaserPrefab, FirePoint.position, Quaternion.identity);
+
+        if(hit)
+        {
+            Debug.Log("Hit " + hit.collider.gameObject);
+
+            Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
+            if(enemy != null)
+            {
+
+            }
+        }
     }
 }
