@@ -26,7 +26,7 @@ public class Enemy_Spawner : MonoBehaviour
     {
         while(true)
         {
-            Vector3 spawnPoint = new Vector3(0, 7, 1);
+            Vector3 spawnPoint = new Vector3(Random.Range(-9, 9), 7, 1);
             Instantiate(enemy, spawnPoint, Quaternion.Euler(0, 0, 180));
 
             yield return new WaitForSeconds(timeDelay);
