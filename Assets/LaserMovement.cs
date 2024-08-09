@@ -14,10 +14,7 @@ public class LaserMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 playerPosition = transform.position;
-        Vector3 aim = mousePosition - playerPosition;
-        transform.Translate(aim * Time.deltaTime * speed);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
