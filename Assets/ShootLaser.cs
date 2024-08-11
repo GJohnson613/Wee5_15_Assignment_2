@@ -37,15 +37,6 @@ public class ShootLaser : MonoBehaviour
         GameObject laserInstance = Instantiate(LaserPrefab, FirePoint.position, Quaternion.identity);
         laserInstance.GetComponent<Rigidbody2D>().velocity = aim * laserSpeed;
 
-        if(hit)
-        {
-            Debug.Log("Hit " + hit.collider.gameObject);
-
-            Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
-            if(enemy != null)
-            {
-                
-            }
-        }
+        
     }
 }
