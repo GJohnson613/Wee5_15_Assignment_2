@@ -53,11 +53,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cfdfef9d353b30b4b82f88f3d88acb5e, type: 3}
       propertyPath: m_Name
-      value: Rocket_1
+      value: Rocket_1 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cfdfef9d353b30b4b82f88f3d88acb5e, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cfdfef9d353b30b4b82f88f3d88acb5e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cfdfef9d353b30b4b82f88f3d88acb5e, type: 3}
       propertyPath: m_StaticEditorFlags
