@@ -44,7 +44,7 @@ public class ShootLaser : MonoBehaviour
             Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
             if(enemy != null)
             {
-
+                
             }
         }
     }

@@ -19,6 +19,9 @@ public class LaserMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Bullet hit enemy");
+        gameObject.SetActive(false);
+        Destroy(gameObject);
         if (collision.gameObject.tag == "Enemy")
         {
             Destroy(collision.gameObject);
