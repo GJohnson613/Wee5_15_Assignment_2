@@ -238,7 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e09c575eae2134387e7220bde83cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 441124114}
+  score: 0
+  pointsPerSecond: 1
 --- !u!1 &411148767
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +329,7 @@ GameObject:
   - component: {fileID: 441124115}
   - component: {fileID: 441124114}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
