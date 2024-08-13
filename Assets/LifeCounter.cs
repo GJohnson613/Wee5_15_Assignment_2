@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class LifeCounter : MonoBehaviour
 {
+    public GameObject Life1;
+    public GameObject Life2;
+    public GameObject Life3;
+
     // Start is called before the first frame update
     void Start()
     {
