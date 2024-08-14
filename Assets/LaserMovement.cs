@@ -5,7 +5,7 @@ using UnityEngine;
 public class LaserMovement : MonoBehaviour
 {
     public float speed = 15.0f;
-    public ParticleSystem explosion;
+    public GameObject explosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,9 @@ public class LaserMovement : MonoBehaviour
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (collision.gameObject.tag == "Enemy")
         {
-            explosion.Play();
+            var collisionPoint = GetComponent<Collider>().ClosestPoint(transform.position);
+            Instantiate(explosion, collisionPoint, Quaternion.identity);
+            
             Destroy(collision.gameObject);
         }
 
