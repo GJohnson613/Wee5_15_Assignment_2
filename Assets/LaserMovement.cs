@@ -25,7 +25,7 @@ public class LaserMovement : MonoBehaviour
         Enemy enemy = collision.gameObject.GetComponent<Enemy>();
         if (collision.gameObject.tag == "Enemy")
         {
-            var collisionPoint = GetComponent<Collider>().ClosestPoint(transform.position);
+            var collisionPoint = collision.ClosestPoint(transform.position);
             Instantiate(explosion, collisionPoint, Quaternion.identity);
             
             Destroy(collision.gameObject);

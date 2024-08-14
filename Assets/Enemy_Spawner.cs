@@ -30,7 +30,10 @@ public class Enemy_Spawner : MonoBehaviour
             Instantiate(enemy, spawnPoint, Quaternion.Euler(0, 0, 180));
 
             yield return new WaitForSeconds(timeDelay);
-            timeDelay -= increment;
+            if (timeDelay > 1)
+            {
+                timeDelay -= increment;
+            }
         }
     }
 }
