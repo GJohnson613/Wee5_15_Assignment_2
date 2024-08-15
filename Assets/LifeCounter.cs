@@ -48,6 +48,7 @@ public class LifeCounter : MonoBehaviour
         if(lifeNumber == 0)
         {
             Life1.gameObject.SetActive(false);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Game Over");
         }
     }
 }
