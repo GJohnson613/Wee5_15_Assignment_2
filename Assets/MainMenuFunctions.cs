@@ -6,11 +6,14 @@ public class MainMenuFunctions : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject Credits;
+    private audioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
         MainMenuButton();
+        audioManager = FindObjectOfType<audioManager>();
+        audioManager.PlayTitleMusic();
     }
 
     public void PlayButton()

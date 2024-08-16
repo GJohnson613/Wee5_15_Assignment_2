@@ -173,9 +173,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserSound: {fileID: 2112717135}
   explosionSound: {fileID: 319086192}
-  lifeLostSound: {fileID: 0}
-  titleMusic: {fileID: 0}
-  gameMusic: {fileID: 0}
+  lifeLostSound: {fileID: 1315901517}
+  titleMusic: {fileID: 1663558683}
+  gameMusic: {fileID: 1235531439}
 --- !u!1 &194164815
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869914420}
   - component: {fileID: 869914419}
+  - component: {fileID: 869914421}
   m_Layer: 0
   m_Name: Nebula Blue
   m_TagString: Untagged
@@ -1192,6 +1193,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869914421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869914418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c19c8ba1fa1fa084187137a21ff65b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &882734946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,11 +1583,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 68db71da3f965874fbf8c6646524d4e9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.353
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1698,7 +1711,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1920,11 +1933,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f480091c3c59e4f49a590777b7d70f20, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
