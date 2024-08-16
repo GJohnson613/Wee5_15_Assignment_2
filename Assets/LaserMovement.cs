@@ -6,10 +6,12 @@ public class LaserMovement : MonoBehaviour
 {
     public float speed = 15.0f;
     public GameObject explosion;
+    private AudioSource explosionSound;
     // Start is called before the first frame update
     void Start()
     {
         Destroy(gameObject, 1f);
+        explosionSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -29,6 +31,8 @@ public class LaserMovement : MonoBehaviour
             Instantiate(explosion, collisionPoint, Quaternion.identity);
             
             Destroy(collision.gameObject);
+            explosionSound.Play();
+
         }
 
         gameObject.SetActive(false);

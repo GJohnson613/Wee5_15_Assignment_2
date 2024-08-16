@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public void EnemyDestroyed()
-    {
-
-    }
+    private AudioSource boom;
+    
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Projectile")
+        {
+            boom = GetComponent<AudioSource>();
+            boom.Play();
+        }
     }
 
     // Update is called once per frame
