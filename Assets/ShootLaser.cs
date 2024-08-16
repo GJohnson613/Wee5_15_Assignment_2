@@ -7,14 +7,12 @@ public class ShootLaser : MonoBehaviour
     public Transform FirePoint;
     public GameObject LaserPrefab;
     float laserSpeed = 5;
-    //Vector3 moveDirection;
+    private AudioSource laserSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        //moveDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position);
-        //moveDirection.z = 0;
-       // moveDirection.Normalize();
+        laserSound = GameObject.Find("Laser Sound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -36,7 +34,7 @@ public class ShootLaser : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(FirePoint.position, aim);
         GameObject laserInstance = Instantiate(LaserPrefab, FirePoint.position, Quaternion.identity);
         laserInstance.GetComponent<Rigidbody2D>().velocity = aim * laserSpeed;
-
+        laserSound.Play();
         
     }
 }

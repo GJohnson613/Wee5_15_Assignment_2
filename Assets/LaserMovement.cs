@@ -11,7 +11,7 @@ public class LaserMovement : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 1f);
-        explosionSound = GetComponent<AudioSource>();
+        explosionSound = GameObject.Find("Explosion Sound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

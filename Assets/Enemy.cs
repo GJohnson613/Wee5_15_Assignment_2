@@ -12,15 +12,6 @@ public class Enemy : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Projectile")
-        {
-            boom = GetComponent<AudioSource>();
-            boom.Play();
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
