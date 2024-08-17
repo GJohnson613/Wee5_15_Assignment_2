@@ -10,6 +10,7 @@ public class LifeCounter : MonoBehaviour
     int lifeNumber;
     public GameObject enemy;
     public GameObject collisionSquare;
+    private AudioSource lifeLostSound;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class LifeCounter : MonoBehaviour
         Life2.gameObject.SetActive(true);
         Life3.gameObject.SetActive(true);
         lifeNumber = 3;
+        lifeLostSound = GameObject.Find("Life Lost Sound").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class LifeCounter : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             updateLives();
+            lifeLostSound.Play();
         }
     }
 
