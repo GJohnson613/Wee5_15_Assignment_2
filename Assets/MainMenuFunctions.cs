@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MainMenuFunctions : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject Credits;
     public GameObject HowToPlay;
+    public TextMeshProUGUI Highscore;
     private audioManager audioManager;
 
     // Start is called before the first frame update
@@ -34,6 +36,7 @@ public class MainMenuFunctions : MonoBehaviour
         MainMenu.SetActive(true);
         Credits.SetActive(false);
         HowToPlay.SetActive(false);
+        Highscore.text = ("Highscore: " + Mathf.FloorToInt(PlayerPrefs.GetFloat("highscore")).ToString());
     }
 
     public void HowToPlayButton()
